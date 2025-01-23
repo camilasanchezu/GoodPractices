@@ -7,6 +7,6 @@ namespace DesignPatterns.Models
 {
     public class HomeViewModel
     {
-        public ICollection<Vehicle> Vehicles { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; } // This property should hold a list of vehicles
     }
 }

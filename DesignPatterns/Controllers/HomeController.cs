@@ -18,7 +18,7 @@ namespace DesignPatterns.Controllers
 
         private readonly IVehicleRepository _vehicleRepository;
 
-        private CarFactory chooseFactory(string vehicle)
+        private CarFactory chooseFactory(string vehicle) // This method should return the correct factory for the vehicle
         {
             switch (vehicle)
             {
@@ -33,7 +33,7 @@ namespace DesignPatterns.Controllers
             }
         }
 
-        public HomeController(IVehicleRepository vehicleRepository,ILogger<HomeController> logger)
+        public HomeController(IVehicleRepository vehicleRepository,ILogger<HomeController> logger) // This constructor should receive an IVehicleRepository and a ILogger
         {
             _vehicleRepository = vehicleRepository;
             _logger = logger;
@@ -71,7 +71,7 @@ namespace DesignPatterns.Controllers
 
         }
         [HttpGet]
-        public IActionResult AddEscape()
+        public IActionResult AddEscape() // This method should add a new Escape vehicle to the repository
         {
 
             CarFactory factory = chooseFactory("Escape");

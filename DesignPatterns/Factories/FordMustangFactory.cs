@@ -7,8 +7,8 @@ namespace DesignPatterns.Factories
     {
         public override Vehicle Create()
         {
-            return new CarModelBuilder()
-                .setModel("Mustang")
+            return new CarModelBuilder() // CarModelBuilder is a class that builds
+                .setModel("Mustang") 
                 .setColor("red")
                 .Build();
         }

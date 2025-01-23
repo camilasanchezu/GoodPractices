@@ -9,7 +9,7 @@ namespace DesignPatterns.Models
     {
         public override int Tires { get => 4; }
 
-        public Car(string color, string brand, string model, int year) : base(color, brand, model, year)
+        public Car(string color, string brand, string model, int year) : base(color, brand, model, year) // This constructor should set the color, brand, model, and year properties
         {
 
         }

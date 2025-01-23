@@ -12,17 +12,17 @@ namespace DesignPatterns.Repositories
 
         
 
-        public void AddVehicle(Vehicle vehicle)
+        public void AddVehicle(Vehicle vehicle) // This method should add a vehicle to the database
         {
             _memoryCollection.Vehicles.Add(vehicle);
         }
 
-        public Vehicle Find(string id)
+        public Vehicle Find(string id) // This method should return a vehicle from the database
         {
            return  _memoryCollection.Vehicles.FirstOrDefault(v => v.ID.Equals(new Guid(id)));
         }
 
-        public ICollection<Vehicle> GetVehicles()
+        public ICollection<Vehicle> GetVehicles() // This method should return a list of vehicles from the database
         {
             return _memoryCollection.Vehicles;
         }

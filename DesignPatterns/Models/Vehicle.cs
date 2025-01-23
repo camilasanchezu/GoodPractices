@@ -12,7 +12,7 @@ namespace DesignPatterns.Models
         #endregion
 
         #region Properties
-        public readonly Guid ID;
+        public readonly Guid ID; // This property should be a unique identifier
         public virtual int Tires { get; set; }
         public string Color { get; set; }
         public string Brand { get; set; }
@@ -25,7 +25,7 @@ namespace DesignPatterns.Models
 
         #region Constructors
 
-        public Vehicle(string color, string brand, string model, int year, double fuelLimit = 10)
+        public Vehicle(string color, string brand, string model, int year, double fuelLimit = 10) // This constructor should set the color, brand, model, year, and fuelLimit properties
         {
             ID = Guid.NewGuid();
             Color = color;
